@@ -1,0 +1,96 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+    <div class="big-section">
+
+        <div class="content-bg">
+
+            <p style="z-index: 5; font-weight: 600">Сайт блядского цирка или </p>
+            <h1 class="bigger">САЙТ КАЧКОВ</h1>
+            <p class="bigger" style="z-index: 5; font-weight: 600">Ты можешь получить по лицу от бодибилдеров</p>
+            <a class="btn btn-success" href="{% url 'get' %}"> ПОЛУЧИТЬ</a>
+
+        </div>
+        <img src="{% static 'img/bg1.png' %} " class="bg1">
+    </div>
+    <hr>
+
+
+    <blockquote class="blockquote-6">
+        <p>Учение без размышления бесполезно, но и размышление без учения опасно. Не тот велик, кто никогда не падал, а
+            тот велик — кто падал и вставал. Красота есть во всем, но не всем дано это видеть. Благородный человек
+            предъявляет требования к себе, низкий человек предъявляет требования к другим.</p>
+        <cite>конфуций</cite>
+    </blockquote>
+
+    <br>
+    <h1 align="center">Список Качков года</h1>
+    <div class="bg"></div>
+    <hr>
+    <section>
+        <div class="main_blocks">
+            <div class="col_spaces">
+                {% for project in projects %}
+                    <div class="content_block">
+                        <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"
+                             height="225" src="{{ project.image.url }}" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+                        <div class="efd">
+                            <div class="ww2d">
+                                <p><b>Имя качка</b></p>
+                                <p>{{ project.title }}</p>
+                            </div>
+                            <br>
+                            <div class="ww2d">
+                                <p><b>Описание качка </b></p>
+                                <p>{{ project.subtitle }}</p>
+                            </div>
+                            <br>
+                            <div class="ww2d">
+                                <p><b>Характеристика качка</b></p>
+                                <p>{{ project.functions }}</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+    {#    <div class="album py-5">#}
+    {#        <div class="container">#}
+    {#            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> {% for project in projects %}#}
+    {#                <div class="col">#}
+    {#                    <div class="card shadow-sm">#}
+    {#                        <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"#}
+    {#                             height="225" src="{{ project.image.url }}" role="img" aria-label="Placeholder: Thumbnail"#}
+    {#                             preserveAspectRatio="xMidYMid slice" focusable="false"></img>#}
+    {#                        <div class="card-body">#}
+    {#                            <p class="fs-3"> {{ project.title }} </p>#}
+    {#                            <p class="card-text">{{ project.subtitle }}</p>#}
+    {#                            <div class="d-flex justify-content-between align-items-center">#}
+    {#                                <div class="btn-group">#}
+    {#                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>#}
+    {#                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>#}
+    {#                                </div>#}
+    {#                                <small class="text-muted">{{ project.time }}</small>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div> {% endfor %} </div>#}
+
+    {#      </div>#}
+    {#     </div>#}
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>

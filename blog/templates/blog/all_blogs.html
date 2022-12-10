@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+    <br>
+    <div class="div">
+        <h2>Админ и другие придурки скопировали с интернета {{blog.count}} поста:</h2>
+        <div class="div2">
+            <a class="btn btn-success" style="margin: 10px; text-align: right" href=" /blog/edit-page ">Добавить пост</a>
+        </div>
+
+    </div>
+    <hr>
+    {% for blog in blog %} <div class="container margin">
+
+  <div class="blog_block">
+    <a href="{% url 'detail' blog.id %}">
+      <h1>{{ blog.title }}</h1>
+    </a>
+    <h6 class="lead">{{ blog.subtitle |safe| truncatechars:200}}</h6>
+    <p>{{ blog.time}}</p>
+  </div>
+</div> {% endfor %} {% endblock %}

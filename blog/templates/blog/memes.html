@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+
+
+
+    <section>
+        <h1 class="center">
+            Галерея мемов
+        </h1>
+        <hr>
+        <p>
+            Здесь расположены только самые смешные мемы, но если нет, то расположите здесь свои
+        </p>
+       <div class="main_blocks">
+            <div class="col_spaces" >
+                {% for project in projects %}
+                    <div class="content_block" style="height: auto">
+                        <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"
+                             height="225" src="{{ project.image.url }}" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+                        <div class="efd">
+                            <div class="ww2d">
+
+                                <p>{{ project.title }}</p>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

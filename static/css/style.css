@@ -1,0 +1,246 @@
+.navbar-brand {
+     font-family: Thillends, serif;
+}
+ .left-bg {
+     width: 30%;
+     position: absolute;
+     top: 189px;
+     left: 72px;
+     text-align: left;
+     margin: auto;
+}
+ .bigger {
+
+     z-index: 1;
+     text-shadow: #FC0 1px 0 10px;
+     -webkit-text-stroke-width: thin;
+     font-size: 60px;
+     width: 80%;
+     text-align: left;
+}
+ .big-section {
+     position: relative;
+     height: 672px;
+     color: white;
+     left: 0;
+     right: 0%;
+     top: 0;
+     background: radial-gradient(28.99% 89.01% at 54.66% 14.89%, rgba(60, 60, 60, 0) 0%, rgba(5, 5, 5, 0) 36.28%, #121212 100%, #121212 108%);
+}
+ img.bg1 {
+     max-width: 100%;
+     opacity: 90%;
+     position: relative;
+
+     height: 100%;
+
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     z-index: -20;
+}
+ body {
+
+}
+ .col-4 {
+     outline: 1px;
+     outline-color: azure;
+     outline: auto;
+     padding: 30px;
+     margin: 10px;
+}
+ .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
+     margin-top: 0;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     line-height: 1.2;
+     font-variant-caps: petite-caps;
+     text-align: center;
+     color: white;
+}
+ p, h6{
+     color: white;
+     text-align: left;
+     font-weight: 100;
+}
+ .blog-content{
+     position: center;
+     max-width: 500px;
+}
+ .blog-content{
+     margin: auto;
+     position: center;
+     font-weight: 100;
+     max-width: 935px;
+}
+ .card-body {
+     background-color: #242424;
+}
+ .card.shadow-sm {
+     border-width: 4px;
+     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+ .effect {
+     z-index: 1;
+     width: 300%;
+     height: 500%;
+     position: fixed;
+     left: -88.96%;
+     right: 60.42%;
+     top: 10%;
+     bottom: -8.94%;
+     background: radial-gradient(111.59% 68.27% at -2.32% 65.41%, #df2900 0%, rgb(83 0 0 / 0%) 90.1%);
+}
+ .color {
+     display: flex;
+     flex-wrap: wrap;
+}
+ .margin {
+     margin: auto;
+     padding: 20px;
+     block-size: auto;
+}
+ .btn.btn-success {
+     background: linear-gradient(265.26deg, rgba(3, 140, 23, 0.25) 8.54%, rgba(3, 103, 166, 0.25) 80.91%);
+     border-radius: 10px;
+     font-size: larger;
+     margin: 20px 0 20px 0;
+}
+ .col {
+     flex: 0 0 auto;
+     width: 33.3333333333%;
+}
+ .m12 {
+     margin: 0 20px 0 20px;
+}
+ .m12:hover, .m12:focus {
+     color: red;
+}
+ header {
+     padding: 15px;
+     text-decoration: none;
+}
+ a {
+     text-decoration: none;
+     color: WHITE;
+     margin: 0 20px;
+     font-weight: 600;
+}
+ h6.center{
+     text-align: center;
+}
+ .blockquote-6 {
+     max-width: 800px;
+     border-left: 6px solid #BFE2FF;
+     font-size: 16px;
+     font-style: italic;
+     margin: 16px;
+     padding: 16px 24px;
+     position: relative;
+}
+ blockquote {
+    /* margin: 25px 49px 1rem;
+     */
+     max-width: 1000px;
+     margin: auto;
+     font-style: italic;
+}
+
+ .blockquote-6 cite {
+     color: #337AB7;
+     font-size: 15px;
+     padding-top: 10px;
+     display: block;
+     text-align: right;
+}
+ @media only screen and (max-width: 1200px){
+     .navbar-toggler{
+         display: none;
+     }
+}
+ @media only screen and (max-width: 992px){
+     .navbar-toggler{
+         display: none;
+     }
+}
+ @media only screen and (max-width: 786px){
+      .navbar-toggler{
+         display: none;
+     }
+     .col{
+         width: 50%;
+    }
+     .container{
+         max-width: 633px;
+    }
+     .big-section {
+         top: 0;
+         background: radial-gradient(78.99% 30.01% at 63.66% 49.89%, rgba(60, 60, 60, 0) 0%, rgba(5, 5, 5, 0) 36.28%, #121212 100%, #121212 108%);
+    }
+     img.bg1 {
+         height: 70%;
+         top: 97px;
+    }
+     .bigger{
+         width:100%;
+         text-align: center;
+    }
+     .left-bg{
+         width:80%;
+         left:0;
+         text-align: center;
+         margin: 50px;
+    }
+     .left-bg>p{
+         width:80%;
+         left:0;
+         margin: auto;
+         text-align: center;
+    }
+}
+ @media only screen and (max-width: 480px){
+     .content>a{
+
+     }
+     .btn.btn-success{
+         font-size: 15px;
+    }
+     .bigger{
+         width:100%;
+         text-align: center;
+    }
+     .left-bg{
+         top: 119px;
+         width:80%;
+         left:0;
+         text-align: center;
+         margin: 52px;
+    }
+     .left-bg>p{
+         width:80%;
+         left:0;
+         margin: auto;
+         text-align: center;
+    }
+     img.bg1 {
+         width: 100%;
+         height: 80%;
+         object-fit: cover;
+         top: 71px;
+         left: 0px;
+    }
+  .blockquote-6{
+       font-size: 13px;
+  }
+  .big-section{
+   height: 500px;
+  }
+  .content{
+   font-size: smaller;
+  }
+  .content>a{
+  margin: 5px;
+  }
+}
+ @media only screen and (max-width: 320px){
+}
