@@ -29,9 +29,18 @@ h6
   float: left
   display: block
   margin-left: auto
-  margin-right: $margin
+  margin-right: calc($margin / 2 )
+
+
+
   margin-top: $margin
-  width: calc((100% - (($cols - 1) * ($margin + 2%))) / $cols)
+  width: calc((100% - (($cols - 1) * $margin )) / $cols)
+  //&:nth-child(#{$cols}n)
+
+  //  margin-right: 0
+
+
+
 
 =button
   @extend %border
@@ -282,11 +291,16 @@ h5
     img
       box-sizing: border-box
       object-fit: cover
-      width: 100%
+
+
+
       margin-bottom: 20px
+
       border-bottom: 1px solid $color2
       border-top: 1px solid $color2
       height: 263px
+
+
       border-radius: 5px
       box-shadow: 0 4px 5px rgba(0, 0, 0, 0.51)
 
@@ -334,3 +348,112 @@ section
 .center
   text-align: center
   margin-left: auto
+
+.right
+  position: absolute
+  top: 18px
+
+  right: 5%
+  z-index: 2
+  display: flex
+
+.right > a
+    margin: 0 15px
+
+@media screen and (max-width: 1024px)
+  section
+    padding: 2% 10%
+
+
+
+  body
+    margin: 0 auto
+
+  .col_spaces
+    > div
+      @include grid(2, 5%)
+
+@media screen and (max-width: 786px)
+  section
+    padding: 2% 15%
+
+  .efd
+    padding: 10px
+    backdrop-filter: blur(15px)
+    background-color: rgba(31, 32, 34, 0.6)
+    max-width: 166px
+    width: fit-content
+    border: 20px
+    position: relative
+    border-radius: 5px
+    border: 1px solid
+    border-color: #337AB7
+
+
+    left: -45px
+    text-align: center
+    p
+      text-shadow: #121212 0px 1px 4px
+
+
+  .big-section
+    background:  radial-gradient(43.99% 54.01% at 50.66% 40.89%, rgba(60, 60, 60, 0) 0%, rgba(5, 5, 5, 0) 36.28%, #121212 100%, #121212 108%)
+    .content-bg
+      box-sizing: border-box
+      width: auto
+
+
+      position: absolute
+      top: 162.5px
+
+      text-align: center
+      margin: auto
+      h1
+
+
+        margin: auto
+        text-align: center
+        outline: none
+        animation: animate 5s linear infinite
+        z-index: 1
+        text-shadow: #fc0 1px 0 10px
+        /* -webkit-text-stroke-width: thin; */
+        width: auto
+
+  body
+    margin: 0 auto
+
+
+
+  .col_spaces
+    > div
+      height: auto
+      padding-left: 58px
+      justify-content: center
+      float: left
+      display: block
+      margin-left: auto
+      width: 100%
+
+
+      @include grid(1, 5%)
+      p
+        font-size: 11px
+
+
+
+    img
+
+      top: 0
+      z-index: -1
+      min-height: 3em
+      margin-left: auto
+      margin-right: 0
+      width: 300px
+      display: block
+      position: absolute
+      right: 0
+      height: 100%
+
+
+

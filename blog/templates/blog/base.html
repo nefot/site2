@@ -15,19 +15,23 @@
 
     <title>сайт Качков</title>
     <link href="//db.onlinewebfonts.com/c/567f1e8e79fe43c568934383e8980445?family=Thillends" rel="stylesheet"/>
-    <link rel="stylesheet" href="{% static 'css/StyleCss.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style_new.css' %}"/>
 </head>
 <body>
 <header>
     <div class="content">
 
         <a href="https://discord.gg/ahetNEt6" class=""
-           style=" font-weight: 100; size: A3 ;font-size: x-large">Блядский цирк</a>
+           style=" font-weight: 100; size: A3 ;font-size: x-large">Нефот</a>
         <a href="{% url 'home' %}" class="">Главная</a>
         <a href="{% url 'all_blogs' %}" class="">Новости</a>
         <a href="{% url 'memes' %}" class="">Галерея мемов</a>
         <a href="#" class="">Обсуждения</a>
 
+        <div class="right">
+            <a href="{% url 'register' %}">Зарегаться</a>
+            <a href="/admin">Войти</a>
+        </div>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
                 aria-label="Toggle navigation">
