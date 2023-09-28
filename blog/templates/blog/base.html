@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{#    <meta http-equiv="Refresh" content="3" />#}
+    {#    <meta http-equiv="Refresh" content="3" />#}
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
 
-    <title>AudioBot</title>
+    <title>Сайт для Меня</title>
     <link href="//db.onlinewebfonts.com/c/567f1e8e79fe43c568934383e8980445?family=Thillends" rel="stylesheet"/>
     <link rel="stylesheet" href="{% static 'css/style_new.css' %}"/>
 </head>
@@ -23,21 +23,21 @@
 
         <a href="https://discord.gg/ahetNEt6" class=""
            style=" font-weight: 100; size: A3 ;font-size: x-large">Нефот</a>
-        <a href="{% url 'home' %}" class="">Main</a>
-        <a href="{% url 'all_blogs' %}" class="">Newes</a>
-        <a href="{% url 'memes' %}" class="">Galerey</a>
-        <a href="#" class="">About</a>
+        <a href="{% url 'home' %}" class="">Главная</a>
+        <a href="{% url 'all_blogs' %}" class="">Новости</a>
+        <a href="{% url 'memes' %}" class="">Галлерея</a>
+        {#        <a href="#" class="">About</a>#}
 
         <div class="right">
-            <a href="{% url 'register' %}">Register</a>
-            <a href="/admin">Login</a>
+            {#            <a href="{% url 'register' %}">Регистрация</a>#}
+            <a href="/admin">Вход</a>
         </div>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="navbarsExample01" >
+        <div class="navbar-collapse collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>

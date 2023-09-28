@@ -1,25 +1,25 @@
 {% extends 'blog/base.html' %} {% load static %} {% block content %}
     <div class="big-section">
-
         <div class="content-bg">
-
-            <p style="z-index: 5; font-weight: 600">voice assistant for photoshop</p>
-            <h1 class="bigger">AudioBot</h1>
-            <p class="bigger" style="z-index: 5; font-weight: 600">ТThe project is an audio assistant for Photoshop users.</p>
-            <a class="btn btn-success" href="{% url 'get' %}">Get Audiobot</a>
-
+            <p style="letter-spacing: 10px;margin: 15px 0 15px  0;">ЭТОТ ПАРЕНЬ </p>
+            <h1 style="margin: 15px 0 15px 0">Артем</h1>
+            <p style="margin: 15px 0 15px 0">Самый кочевый чел в мире </p>
+            <p class="subtext" style="margin: 10px 0 10px 0; color :#aaaaaa;">Он даст вам пизды</p>
+            <a class="btn btn-success" href="{% url 'get' %}">Получить пизды</a>
         </div>
         <img src="{% static 'img/bg1.png' %} " class="bg1">
     </div>
     <hr>
 
 
-    <!-- <blockquote class="blockquote-6">
+
+
+    <blockquote class="blockquote-6">
         <p>Учение без размышления бесполезно, но и размышление без учения опасно. Не тот велик, кто никогда не падал, а
             тот велик — кто падал и вставал. Красота есть во всем, но не всем дано это видеть. Благородный человек
             предъявляет требования к себе, низкий человек предъявляет требования к другим.</p>
         <cite>конфуций</cite>
-    </blockquote> -->
+    </blockquote>
 
     <br>
     <h1 align="center">list of available commands</h1>
@@ -30,9 +30,9 @@
             <div class="col_spaces">
                 {% for project in projects %}
                     <div class="content_block">
-                        <!-- <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"
+                        <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"
                              height="225" src="{{ project.image.url }}" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false"></img> -->
+                             preserveAspectRatio="xMidYMid slice" focusable="false"></img>
                         <div class="efd">
                             <div class="ww2d">
                                 <p><b>Command name</b></p>
