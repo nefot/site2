@@ -1,4 +1,4 @@
-/* Main Text Styles */
+
 .btn.btn-success, .big-section > a, .blog_block {
   border: 1px solid;
   border-color: #9fb7e8;
@@ -247,7 +247,7 @@ h5 {
   box-shadow: 0 0 5px #000;
   letter-spacing: 1px;
   overflow: hidden;
-  transition: 0, 45s;
+
   text-align: center;
 }
 .col_spaces > div img {
@@ -292,6 +292,9 @@ h5 {
 .col_spaces > div:hover::before {
   color: white;
   transition: 1s;
+}
+p{
+  letter-spacing: 15px;
 }
 
 section {
@@ -375,7 +378,7 @@ section {
     margin: auto;
   }
   .big-section .content-bg h1 {
-    margin: auto;
+    margin: auto;/* Main Text Styles */
     text-align: center;
     outline: none;
     animation: animate 5s linear infinite;
@@ -393,7 +396,7 @@ section {
     justify-content: center;
     float: left;
     display: block;
-    margin-left: auto;
+    margin-left: auto/* Main Text Styles */;
     width: 100%;
     justify-content: center;
     float: left;
