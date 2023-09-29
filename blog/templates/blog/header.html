@@ -1,13 +1,22 @@
 
+
+
+
+
+
+
+
+
+
 {% extends 'blog/base.html' %} {% load static %} {% block content %}
-    <div class="get_block">
-        <h1>Ура!!!</h1>
-        <h1> Вы получили пизды поздравляю</h1>
-        <h2>Ваше ебало разьебало в кровище</h2>
-        <p style="text-align: center">Вы выглядите замечательно</p>
+    <div class="get_block" style="padding:   20% 0 20% 0">
+        <h1>Ура! Вы получили пизды поздравляю!</h1>
+        <h3> </h3>
+        <p style="text-align: center">Ваше ехало разебало в кровище. Вы выглядите замечательно</p>
 
 
-        <a class="btn btn-success" style = "margin: 0 43% 0 43% ;justify-content: center;display: block;" href="{% url 'home' %}">получить пизды еще раз</a>
-        <p>1</p>
+
+        <a class="btn btn-success"  href="{% url 'home' %}">получить пизды еще раз</a>
+
     </div>
 {% endblock %}

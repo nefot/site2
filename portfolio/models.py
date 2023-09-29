@@ -10,6 +10,7 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/images/', verbose_name="Фото качка")
     time = models.DateTimeField(auto_now=False, default=timezone.now)
     is_published = models.BooleanField(default=True)
+    money = models.IntegerField(default=0,verbose_name="Монеты")
 
     def __str__(self):
         return self.title

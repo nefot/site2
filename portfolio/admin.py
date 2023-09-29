@@ -7,7 +7,7 @@ from .models import *
 
 
 class Person(admin.ModelAdmin):
-    list_display = ['title', 'subtitle', 'time', 'is_published']
+    list_display = ['title', 'subtitle', 'time', 'is_published',"money"]
     list_display_links = ['title','time']
     search_fields = ('title','time')
     list_editable = ['is_published']

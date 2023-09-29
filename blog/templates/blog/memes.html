@@ -3,15 +3,11 @@
 
 
     <section>
-        <h1 class="center">
-             Galerey
-        </h1>
+        <h1 class="center">Галерея мемов ебаных</h1>
         <hr>
-        <p>
-            screenshots
-        </p>
-       <div class="main_blocks">
-            <div class="col_spaces" >
+        <p style="text-align: center">ебучие мемы они меня затрахали, но меня не ебет</p>
+        <div class="main_grid">
+            <div class="grid" style="grid-auto-rows: 375px">
                 {% for project in projects %}
                     <div class="content_block" style="height: auto">
                         <img class="bd-placeholder-img card-img-top" style="object-fit: cover;" width="100%"
@@ -20,7 +16,7 @@
                         <div class="efd">
                             <div class="ww2d">
 
-                                <p>{{ project.title }}</p>
+                                <p style="text-align: center">{{ project.title }}</p>
                             </div>
 
 
