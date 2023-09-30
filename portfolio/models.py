@@ -1,6 +1,19 @@
 from django.db import models
 from django.utils import timezone
+from PIL import Image
+from io import BytesIO
+from django.core.files import File
+from PIL import Image
 
+def make_thumbnail(image, size=(100, 100)):
+    """Создает миниатюры заданного размера"""
+    im = Image.open(image)
+    im.convert('RGB')
+    im.thumbnail(size)
+    thumb_io = BytesIO()
+    im.save(thumb_io, 'JPEG', quality=60)
+    thumbnail = File(thumb_io, name=image.name)
+    return thumbnail
 
 
 class Project(models.Model):
@@ -8,22 +21,28 @@ class Project(models.Model):
     subtitle = models.CharField(max_length=500, verbose_name="Характеристика качка")
     functions = models.CharField(max_length=500, verbose_name="Функции качка", default="Бездарь")
     image = models.ImageField(upload_to='portfolio/images/', verbose_name="Фото качка")
+    print(image)
+    print(type(image))
     time = models.DateTimeField(auto_now=False, default=timezone.now)
     is_published = models.BooleanField(default=True)
-    money = models.IntegerField(default=0,verbose_name="Монеты")
+    money = models.IntegerField(default=0, verbose_name="Монеты")
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        self.image = make_thumbnail(self.image, size=(500, 500))
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Качка"
         verbose_name_plural = "Список качков"
 
+
 class Memes(models.Model):
     title = models.CharField(max_length=100, verbose_name="Название мема")
     image = models.ImageField(upload_to='portfolio/images/', verbose_name="Фото качка")
     time = models.DateTimeField(auto_now=False, default=timezone.now)
-
 
     def __str__(self):
         return self.title

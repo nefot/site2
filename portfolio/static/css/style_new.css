@@ -116,7 +116,8 @@ body {
         text-shadow: 0 0 10px rgb(229, 168, 16), 0 0 20px rgb(244, 196, 3), 0 0 40px rgb(244, 240, 3), 0 0 80px rgb(236, 244, 3), 0 0 160px rgb(3, 188, 244);
     }
 }
-.content-bg{
+
+.content-bg {
     /*-moz-transform:rotate(15deg);*/
     -webkit-transform: rotate(-15deg);
 }
@@ -297,13 +298,15 @@ footer {
 h5 {
     margin: 0;
 }
-.get_block > a{
+
+.get_block > a {
     width: 200px;
     font-size: 20px;
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
 }
+
 .get_block {
     margin: 8px;
     padding: 8px;
@@ -452,6 +455,14 @@ section {
 @media screen and (max-width: 786px) {
     section {
         padding: 2% 15%;
+    }
+
+    .content {
+        position: absolute;
+        top: 18px;
+        left: 5%;
+        z-index: 2;
+        display: flex;
     }
 
     .efd {
