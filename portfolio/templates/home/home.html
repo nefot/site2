@@ -1,36 +1,255 @@
 {% extends 'blog/base.html' %} {% load static %} {% block content %}
-    <div class="big-section">
-        <div class="content-bg">
-            <p style="letter-spacing: 10px;margin: 15px 0 15px  0;">ЭТОТ ПАРЕНЬ </p>
-            <h1 style="margin: 15px 0 15px 0">Артем</h1>
-            <p style="margin: 15px 0 15px 0">Самый кочевый чел в мире </p>
-            <p class="subtext" style="margin: 10px 0 10px 0; color :#aaaaaa;">Он даст вам пизды</p>
-
+ <div class="overlap">
+        <div class="postheader">
+            <div class="main">
+                <div class="overlap-group">
+                    <img class="vsblgyq" src="{% static 'img/background.png' %}"/>
+                    <div class="main-text">
+                        <p class="p"><span class="span">ЭТО ВАМ </span> <span class="text-wrapper-3">НЕ ФОТО</span></p>
+                        <div class="nefot">
+                            <div class="div">
+                                <div class="text-wrapper"><p>Артем Нефот</p></div>
+                                <div class="text-wrapper-2"><p>Фотограф, цифровой художник</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a class="btn btn-success" href="{% url 'get' %}" style=" position: absolute;
-  top: 370px;
-  left: 60px;">Получить пизды</a>
-        <img src="{% static 'img/bg1.png' %} " class="bg1">
+     <div class="overlaps">
+        <div class="best-obrabotk">
+            <div class="overlap-2">
+                <div class="div-2">
+                    <p class="text-wrapper-4">ЛУЧШАЯ ОБРАБОТКА </p>
+                    <p class="text-wrapper-5">ФОТОГРАФИЙ</p>
+                </div>
+                <div class="element">
+                    <p class="text-wrapper-6">5 лет опыта работы</p>
+                </div>
+            </div>
+        </div>
+         <div class="text-wrappers">
+{#        <div class="text-wrapper-8">###############################3</div>#}
+        <div class="menu-grid">
+            <div class="all-frame">
+                <div class="overlap-group-2">
+                    <button class="frame"><img src="{% static 'img/block1.png' %}" alt="">
+                    <div class="text-wrapper-9">ПРОСТАЯ СЬЕМКА</div>
+                    </button>
+
+                </div>
+            </div>
+            <div class="all-frame">
+                <div class="overlap-group-2">
+                    <button class="frame"><img src="{% static 'img/block2.png' %}" alt="">
+                    <div class="text-wrapper-9">ОБРАБОТКА ФОТО</div>
+                    </button>
+
+                </div>
+{#                <b style="text-align: center; margin: 10px;width:100%">что то еще</b>#}
+{#                <p>professional  who can see beauty even in the dullest shades...</p>#}
+            </div>
+            <div class="all-frame">
+                <div class="overlap-group-2">
+                    <button class="frame"><img src="{% static 'img/block3.png' %}" alt="">
+                    <div class="text-wrapper-9">ПРОДВИНУТАЯ ОБРАБОТКА</div><p>
+
+                        </p>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+
+</div>
     </div>
-    <hr>
+    </div>
 
 
 
 
-    <blockquote class="blockquote-6">
-        <p>Учение без размышления бесполезно, но и размышление без учения опасно. Не тот велик, кто никогда не падал, а
-            тот велик — кто падал и вставал. Красота есть во всем, но не всем дано это видеть. Благородный человек
-            предъявляет требования к себе, низкий человек предъявляет требования к другим.</p>
-        <cite>конфуций</cite>
-    </blockquote>
+
+
+
+
+
+
+
+
+
+    {#    <div class="big-section">#}
+{#        <div class="content-bg">#}
+{#            <p style="letter-spacing: 10px;margin: 15px 0 15px  0;">ЭТОТ ПАРЕНЬ </p>#}
+{#            <h1 style="margin: 15px 0 15px 0">Артем</h1>#}
+{#            <p style="margin: 15px 0 15px 0">Самый кочевый чел в мире </p>#}
+{#            <p class="subtext" style="margin: 10px 0 10px 0; color :#aaaaaa;">Сайт от меня длч меня</p>#}
+{##}
+{#        </div>#}
+{#        <a class="btn btn-success" href="{% url 'get' %}" style=" position: absolute;#}
+{#  top: 370px;#}
+{#  left: 60px;">Получить деньги</a>#}
+{#        <img src="{% static 'img/bg1.png' %} " class="bg1">#}
+{#    </div>#}
+{#    <hr>#}
+
+{#    <div class="kalendar_base">#}
+{##}
+{#        <h1>РАСПИСАНИЕ</h1>#}
+        {#    <p style="text-align: center">расписание на текущую неделю бла бла бла ещё куча текста</p>#}
+        {#        <div class="today">#}
+        {#            <h3>сегодня</h3>#}
+        {#        </div>#}
+{#        <div class="week">#}
+{#            <div class="monday">#}
+{#                <h3>понедельник</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'monday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <div class="para_name">#}
+{#                                        <p>{{ i.task }}</p>#}
+{#                                    </div>#}
+{#                                    <div class="gr">#}
+{#                                        <div class="name">#}
+{#                                            Сыч#}
+{#                                        </div>#}
+{#                                        <div class="kb">#}
+{#                                            <p>215</p>#}
+{#                                        </div>#}
+{##}
+{#                                    </div>#}
+{##}
+{#                                    <div class="time">#}
+{#                                        <p>9:00 - 10:30</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{##}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#            <div class="tuesday">#}
+{#                <h3>вторник</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'tuesday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="wensday">#}
+{#                <h3>среда</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'wensday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="thursdy">#}
+{#                <h3>четверг</h3>#}
+{#                <hr>#}
+{#                <div class=w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'thursdy' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="friday">#}
+{#                <h3>пятница</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'friday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="saturday">#}
+{#                <h3>суббота</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'saturday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#            <div class="sunday">#}
+{#                <h3>воскресенье</h3>#}
+{#                <hr>#}
+{#                <div class="w">#}
+{#                    {% for day, day_name in days_of_week.items %}#}
+{#                        {% if day == 'sunday' %}#}
+{#                            {% for i in day_name %}#}
+{#                                <div class="bg_day">#}
+{#                                    <p>{{ i.task }}</p>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#    </div>#}
+
+<section class = 'aboba'>
+{#    <blockquote class="blockquote-6">#}
+{#        <p>Учение без размышления бесполезно, но и размышление без учения опасно. Не тот велик, кто никогда не падал, а#}
+{#            тот велик — кто падал и вставал. Красота есть во всем, но не всем дано это видеть. Благородный человек#}
+{#            предъявляет требования к себе, низкий человек предъявляет требования к другим.</p>#}
+{#        <cite>конфуций</cite>#}
+{#    </blockquote>#}
 
     <br>
-    <h1 align="center">Качки года сего</h1>
-    <p style="text-align: center;margin:30px">самые лучшие нечисти этого мира, только они способны уничтожить этот мир
-        нахуй своей красотой, и уродством</p>
-
+    <h1 align="center">Галерея лучших работ</h1>
+    <p >Обработка изображений в Adobe Photoshop - это искусство преобразования и улучшения фотографий с использованием различных инструментов и техник.</p>
+</section>
     <hr>
-    <section>
+    <section class="ballisto">
         <div class="main_grid">
             <div class="grid">
 
@@ -42,19 +261,7 @@
                                 <h2 style="margin: auto; text-align: center">{{ project.title }}</h2>
 
                             </div>
-                            <div class="card_description">
-                                <p><b>Описание</b></p>
-                                <p>{{ project.subtitle }}</p>
-                            </div>
-                            <div class="card_function">
-                                <p><b>Функции качка</b></p>
-                                <p>{{ project.functions }}</p>
-                            </div>
 
-
-                        </div>
-                        <div class="money">
-                            <p>{{ project.money }} RUB</p>
                         </div>
                     </div>
                 {% endfor %}

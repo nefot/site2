@@ -1,21 +1,24 @@
 {% extends 'blog/base.html' %} {% load static %} {% block content %}
-    <br>
-    <div class="div">
-        
-        <div class="div2">
-            <a class="btn btn-success" style="margin: 10px; text-align: right" href=" /blog/edit-page ">выдать базу</a>
-        </div>
-
-    </div>
-    <hr>
-    {% for blog in blog %}
-        <div class="container margin">
-
-            <div class="blog_block">
-                <a href="{% url 'detail' blog.id %}">
-                    <h1>{{ blog.title }}</h1>
-                </a>
-                <h6 class="lead">{{ blog.subtitle |safe| truncatechars:200 }}</h6>
-                <p>{{ blog.time }}</p>
-            </div>
-        </div> {% endfor %} {% endblock %}
+    <section>
+        {% for blog in blog %}
+            <form action="{% url 'detail' blog.id %}" target="GET">
+                <button class="box">
+                    <div class="feed-desktop">
+                        <div class="group">
+                            <h1>{{ blog.title }}</h1>
+                            <h2>{{ blog.subtitle |safe| truncatechars:200 }}</h2>
+                        </div>
+                        <div class="group-2">
+                            <p>@samurai2099</p>
+                            <h2>{{ blog.time.day }}<br/>MAY</h2>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag"><div><p>#meditation</p></div></div>
+                        <div class="tag"><div><p>#mentalpeace</p></div></div>
+                    </div>
+                </button>
+            </form>
+        {% endfor %}
+    </section>
+{% endblock %}

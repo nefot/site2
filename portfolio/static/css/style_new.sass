@@ -1,459 +1,321 @@
-$font-stack: Thillends, serif
-$primary-color: #dedddd
-$text-decoration: none
-$w: 600
-$border_size: 1px
-$herf-col: pink
-$bigH: 650px
-$max-with: 80%
-$border: 8px
-$color1: #1f2022
-$type: none
-$color2: #fff
-/* Main Text Styles */
-$color_off: #0e3742
-$color_on: white
-$color_blom: rgb(3, 188, 244)
-
-%border
-  border: $border_size solid
-  border-color: #9fb7e8
-
-
-h6
-  text-indent: 30px
-
-
-=grid($cols,$margin )
-  justify-content: center
-  float: left
-  display: block
-  margin-left: auto
-  margin-right: calc($margin / 2 )
-
-
-
-  margin-top: $margin
-  width: calc((100% - (($cols - 1) * $margin )) / $cols)
-  //&:nth-child(#{$cols}n)
-
-  //  margin-right: 0
-
-
-
-
-=button
-  @extend %border
-  background: linear-gradient(337.26deg, rgb(3, 140, 23) 8.54%, rgb(3, 103, 166) 80.91%)
-  border-radius: $border
-  font-size: larger
-  margin: 5% 0 5% 0
-  box-shadow: 0px 4px 8px 0px #000
-  animation: animates 5s linear infinite
-  backdrop-filter: blur(15px)
-
-
-
-
-=left
-  max-width: 11em
-  min-height: 3em
-  margin-left: auto
-  margin-right: 0
-
-
-=text_a($fontW, $text_align)
-  text-decoration: $text-decoration
-  color: $primary-color
-  text-align: $text_align
-  font-weight: $fontW
-
-=text_h($fontW,$al)
-  text-decoration: $text-decoration
-  color: $primary-color
-  font-weight: $fontW
-  text-align: $al
-  margin: $border
-
-=alignment($top:0px,$bottom:0px,$left:0px,$right:0px)
-  top: $top
-  bottom: $bottom
-  left: $left
-  right: $right
-
-=citat
-  .blockquote-6
-    max-width: 95%
-    border-left: 6px solid #BFE2FF
-    font-size: 15px
-    font-style: italic
-    margin: $border
-    padding: $border
-    position: relative
-
-    cite
-      color: #337AB7
-      font-size: 20px
-      padding-top: $border
-      display: block
-      text-align: right
-
-@include citat
-
-
-%block
-  padding: 15px
-  background-color: $color1
-  margin: 15px 0 15px 0
-  border-radius: $border
-  @extend %border
-
-%section
-  padding: 10%
+$font: 'Nunito', sans-serif
+$base-light-color-bg: rgb(18, 18, 18)
+$color: #24E063
+$base-light-color-inter: #3EAD63
+$color-text: #d8d8d8
 
 *
-  text-decoration: $text-decoration
-h2
-  @include text_h(600, center)
-
-body
-  margin: 0 30px
-
-.big-section
-  position: relative
-  height: $bigH
-  color: white
-  background: radial-gradient(23.99% 89.01% at 64.66% 14.89%, rgba(60, 60, 60, 0) 0%, rgba(5, 5, 5, 0) 36.28%, #121212 100%, #121212 108%)
-  > a
-        @include button
-
-  .content-bg
-    box-sizing: border-box
-    max-height: calc(100% / 4)
-    width: calc(100% / 4)
-    position: absolute
-    top: calc(($bigH - $bigH / 2) / 2)
-    left: 5%
-    text-align: left
-    margin: auto
+  color: $color-text
 
 
-    h1
-      color: #0e3742
-      font-size: 60px
-      text-align: left
-      outline: none
-      @if $type == bloom
-        -webkit-box-reflect: below 1px linear-gradient(transparent, #0008)
-      @else if $type == matador
-        -webkit-box-reflect: none
-      animation: animate 5s linear infinite
-
-      @keyframes animate
-        0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%
-          color: $color_off
-          text-shadow: none
-        18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%
-          color: $color_on
-          text-shadow: 0 0 10px $color_blom, 0 0 20px $color_blom, 0 0 40px $color_blom, 0 0 80px $color_blom, 0 0 160px $color_blom
-
-      z-index: 1
-      text-shadow: #fc0 1px 0 10px
-      -webkit-text-stroke-width: thin
-      width: 80%
+%setting
+  padding: 0 60px
 
 
-  img
-
-    z-index: -1
-    min-height: 3em
-    margin-left: auto
-    margin-right: 0
-
-.btn.btn-success
-  @include button
-
-
-.div
-  max-width: $max-with
-  margin: auto
-
-  h2, h1
-    text-align: left
-
-.div2
-  @include left
-
-a
-  @include text_a(600 , center)
-  margin: 0 (100% - 98%)
-
-header
-  padding: $border
-  box-shadow: 0px 4px 8px 0px #000
-  &:hover
-    color: $herf-col
-
-
-
-
-body
-  color: $primary-color
-  background-color: rgba(18, 18, 18, 1)
-
-
-img
-  max-width: 100%
-  opacity: 90%
-  position: relative
+=text($size, $width, $color)
+  font-weight: $width
+  color: $color
+  font-size: $size
   height: 100%
-  display: block
-  margin-left: auto
-  margin-right: auto
-  z-index: 1
-
-.container
-  p
-    @include text_h(400, left)
-
-  max-width: 80%
-
-.blog-content > h6
-
-  @include text_h(400, left)
-
-.blog_block > a
-  text-align: center
-
-.blog-content > h1
-  @include text_h(400, center)
-  text-align: center
-
-footer
-  left: 0
-  position: absolute
-  margin-top: 577px
-  width: 100%
-  padding: $border
-  text-align: center
-  background-color: #000000
-
-
-h5
-  margin: 0
-
-.get_block
-  margin: $border
-  padding: $border
-  background-color: #151a21
-  border-radius: $border
-
-
-
-  h1
-    text-align: center
-
-.blog_block
-  @extend %block
-  @extend %border
-
-  p
-    text-align: right
-    color: #bebebe
-
-  h6
-    margin: 15px
-
-.card-body
-  background-color: $color1
-
-
-
-.col_spaces
-  width: 100%
-
-  > div
-    height: 100%
-    @include grid(3, 4%)
-    background-color: rgba(158, 158, 158, 0.31)
-    padding: 20px
-    height: 679px
-    border-radius: 5px
-    backdrop-filter: blur(15px)
-    border: 1px solid $color2
-    box-shadow: 0 0 5px #000
-    letter-spacing: 1px
-    overflow: hidden
-    transition: 0, 45s
-    text-align: center
-
-
-    img
-      box-sizing: border-box
-      object-fit: cover
-
-
-
-      margin-bottom: 20px
-
-      border-bottom: 1px solid $color2
-      border-top: 1px solid $color2
-      height: 263px
-
-
-      border-radius: 5px
-      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.51)
-
-    p
-      margin: 0
-      text-align: left
-
-    hr
-      position: relative
-      top: -35px
-      margin: 0
-      z-index: -1
-
-    > div
-      width: fit-content
-      border: 20px
-      text-align: center
-
-    b
-      @include text_a(600, left)
-      &::before
-        content: " "
-        width: 100%
-
-    &::before
-      color: black
-      transition: 1s
-
-    &:hover::before
-      color: white
-      transition: 1s
 
 section
-  padding: 2% 10%
-
-.bg
-  content: ""
-  position: absolute
-  left: 0
-  height: 500%
+  padding: 0 40px
   width: 100%
-  background: radial-gradient(65.59% 17.27% at -3.32% 17.41%, #24ff6c 0%, rgba(50, 0, 0, 0) 90.1%)
-  z-index: -2
+  height: 100%
 
-.center
+=button($color)
+  color: $color-text
+  background-color: $color
+  width: 150px
+  border: 0
+  border-radius: 5px
+  height: 100%
+  transition: 0.2s
   text-align: center
-  margin-left: auto
+  p
+    margin: 0
 
-.right
-  position: absolute
-  top: 18px
+button:hover
+  border-color: white
+  transition: 0.2s
 
-  right: 5%
-  z-index: 2
-  display: flex
-
-.right > a
-    margin: 0 15px
-
-@media screen and (max-width: 1024px)
-  section
-    padding: 2% 10%
+%sto
+  height: 100%
+  width: 100%
 
 
+%center
+  display: inline-flex
+  align-items: center
 
-  body
-    margin: 0 auto
+body
+  background-color: $base-light-color-bg
+  font-family: $font
+  margin: 0
+  letter-spacing: 1px
 
-  .col_spaces
-    > div
-      @include grid(2, 5%)
-
-@media screen and (max-width: 786px)
-  section
-    padding: 2% 15%
-
-  .efd
-    padding: 10px
-    backdrop-filter: blur(15px)
-    background-color: rgba(31, 32, 34, 0.6)
-    max-width: 166px
-    width: fit-content
-    border: 20px
-    position: relative
-    border-radius: 5px
-    border: 1px solid
-    border-color: #337AB7
-
-
-    left: -45px
-    text-align: center
-    p
-      text-shadow: #121212 0px 1px 4px
-
-
-  .big-section
-    background:  radial-gradient(43.99% 54.01% at 50.66% 40.89%, rgba(60, 60, 60, 0) 0%, rgba(5, 5, 5, 0) 36.28%, #121212 100%, #121212 108%)
-    .content-bg
-      box-sizing: border-box
-      width: auto
-
-
-      position: absolute
-      top: 162.5px
-
-      text-align: center
-      margin: auto
-      h1
-
-
-        margin: auto
-        text-align: center
-        outline: none
-        animation: animate 5s linear infinite
-        z-index: 1
-        text-shadow: #fc0 1px 0 10px
-        /* -webkit-text-stroke-width: thin; */
-        width: auto
-
-  body
-    margin: 0 auto
-
-
-
-  .col_spaces
-    > div
-      height: auto
-      padding-left: 58px
-      justify-content: center
-      float: left
-      display: block
-      margin-left: auto
+  .header
       width: 100%
+      height: 54px
+      background-color: $base-light-color-bg
+      padding: 0
+
+      .rad
+        height: 100%
+        margin: auto
+        width: 75%
+        justify-content: space-between
+        display: flex
+        .text-wrapper-10
+          @include text(24,400, $color-text)
+          font-family: $font
+          @extend %center
+          text-align: center
+        .menu
+          @extend %center
+          justify-content: center
+          gap: 17px
+          color: $base-light-color-bg
+          height: 100%
+          *
+            height: 100%
+            a
+              text-decoration: $color-text
+          .text-wrapper-12
+             @include button($base-light-color-bg)
+             color: $color-text
+        .button
+          @include button($base-light-color-bg)
+
+        .button:hover
+          border: 1px solid $color
+          transition: 0.5s
+          background-color: $base-light-color-inter
+
+  .overlap
+    .overlap-2
+      padding: 10px
+      width: fit-content
+      margin: auto
+      .div-2
+        @include text(50px,900,white)
+        display: flex
+        gap: 16px
+        height: fit-content
+        margin: 0
+        white-space: nowrap
+        justify-content: center
+      .text-wrapper-4
+        font-style: italic
+        color: $color-text
+    .postheader
+      .main
+        height: 683px
+        .overlap-group
+           @extend %sto
+        .vsblgyq
+          background-color: $color-text
+          width: 100%
+          height: 683px
+          top: 54px
+          left: 59px
+          object-fit: cover
+        .main-text
+          position: absolute
+          width: 588px
+          top: 30%
+          left: 219px
+          align-items: center
+          justify-content: center
+          align-content: center
+          .div
+            p
+              text-align: left
+              margin: 0
+              padding: 0
+            .text-wrapper > p
+              @include text(50px,400,$color-text)
+              font-style: italic
+              letter-spacing: 0
+              line-height: normal
+            .text-wrapper-2 > p
+              @include text(21px,100,$color-text)
+              letter-spacing: 0
+              line-height: normal
+          .p
+            @include text(53px,900,transparent)
+            white-space: nowrap
+            letter-spacing: 0
+            line-height: normal
+            .span
+              color: $color-text
+            .text-wrapper-3
+              color: $color
+  .overlaps
+    @extend %setting
+    $font: 'Open Sans', sans-serif
 
 
-      @include grid(1, 5%)
-      p
-        font-size: 11px
+    %font
+      font-family: $font
+
+    .best-obrabotk
+      //border: 0.7rem solid $color
+
+      .overlap-2
+      padding: 10px
+      width: fit-content
+      margin: auto
+      .div-2
+        display: flex
+        font-weight: 900
+        font-size: 50px
+        gap: 16px
+        height: fit-content
+        margin: 0
+        white-space: nowrap
+        justify-content: center
+
+      .text-wrapper-4
+        @extend %font
+        font-style: italic
+        color: $color-text
+
+      .text-wrapper-5
+        @extend %font
+        font-style: italic
+        color: $color
+
+      .text-wrapper-6
+        @include text(25px,300,$color-text)
+        text-align: right
 
 
-
-    img
-
-      top: 0
-      z-index: -1
-      min-height: 3em
-      margin-left: auto
-      margin-right: 0
-      width: 300px
-      display: block
-      position: absolute
-      right: 0
-      height: 100%
+      .text-wrapper-8
+        @include text(25px,300,$color-text)
+        margin: 20px
+        text-align: center
 
 
+      .text-wrapper-9
 
+        @include text(25px,300,$color-text)
+        width: 248px
+        margin: auto
+        font-family: $font
+        text-align: center
+        letter-spacing: 0
+        line-height: normal
+
+    .text-wrappers
+      padding: 20px
+
+      .menu-grid
+        margin: 20px
+        display: flex
+        gap: 25px
+        justify-content: center
+        align-content: center
+        flex-wrap: nowrap
+        align-items: center
+        .all-frame
+          width: 370px
+          background: #fff0
+          .frame
+
+            background-color: transparent
+            border-radius: 10px
+            padding: 10px
+            BORDER: 0
+            background-size: cover
+            background-position: 50% 50%
+            img
+              height: 100%
+              width: 100%
+
+p,h1,h2,h3,h4,h5,h6,a
+  margin: 0
+h2
+  padding: 20px
+
+.box
+  background-color: #1b1b1b
+  max-width: 65%
+  width: 100%
+  border: 1px solid #2a2a2a
+  text-align: left
+  display: block
+  margin:  10px auto
+  padding: 30px
+  border-radius: 20px
+  .group
+    width: 100%
+  h1
+    margin:  0 0 20px  0
+    color: $color
+
+  h2
+
+    font-size: 20px
+    //font-weight: lighter
+  .feed-desktop
+    display: flex
+
+    margin: 10px
+  .tags
+    display: flex
+    gap: 20px
+    .tag
+      padding: 5px 15px
+      border: 1px solid $color
+      border-radius: 100px
+  .group-2 > p
+    position: relative
+    top: 141px
+    left: -45px
+    transform: rotate(-90deg)
+  .group-2 > h2
+    font-size: 25px
+    font-weight: bold
+
+.aboba
+  h1,h2,h3,p
+
+    text-align: left
+    margin: 15px
+
+footer
+  flex: 0 0 auto
+
+  padding: 20px
+  text-align: center
+  background-color: #2d2d2d
+
+.ballisto
+  margin: 40px
+.grid
+
+  margin: auto
+  grid-gap: 20px
+  display: grid
+  grid-template-columns: repeat(auto-fit, 375px)
+  justify-content: center
+  img
+    object-fit: cover
+    width: 100%
+  .contents
+    height: 100%
+    background-color: rgb(28, 30, 32)
+    border-radius: 5px
+    backdrop-filter: blur(15px)
+    border: 1px solid #302f2f
+    letter-spacing: 1px
+    overflow: hidden
+    text-align: center
+  > div img
+    box-sizing: border-box
+    object-fit: cover
+    height: 250px
+
+.all
+  height: 100vh

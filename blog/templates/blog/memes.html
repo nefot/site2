@@ -1,11 +1,8 @@
 {% extends 'blog/base.html' %} {% load static %} {% block content %}
+    <div class="all-blogs">
 
-
-
-    <section>
-        <h1 class="center">Галерея мемов ебаных</h1>
-        <hr>
-        <p style="text-align: center">ебучие мемы они меня затрахали, но меня не ебет</p>
+        <section>
+            <h1 class="center" style="margin: 20px">Самая обычная онлайн галерея</h1>
         <div class="main_grid">
             <div class="grid" style="grid-auto-rows: 375px">
                 {% for project in projects %}
@@ -18,14 +15,15 @@
 
                                 <p style="text-align: center">{{ project.title }}</p>
                             </div>
-
-
                         </div>
-
-
                     </div>
                 {% endfor %}
             </div>
         </div>
+         <div class="">
+        <h1>все!</h1>
+    </div>
     </section>
+
+    </div>
 {% endblock %}
