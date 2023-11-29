@@ -6,7 +6,7 @@ $color-text: #d8d8d8
 
 *
   color: $color-text
-
+  transition: 1s
 
 %setting
   padding: 0 60px
@@ -240,7 +240,7 @@ h2
 
 .box
   background-color: #1b1b1b
-  max-width: 65%
+  max-width: 75%
   width: 100%
   border: 1px solid #2a2a2a
   text-align: left
@@ -292,7 +292,7 @@ footer
   background-color: #2d2d2d
 
 .ballisto
-  margin: 40px
+  padding: 40px
 .grid
 
   margin: auto
@@ -319,3 +319,55 @@ footer
 
 .all
   height: 100vh
+
+@media screen and (max-width: 1029px)
+  .best-obrabotk
+    margin: auto
+    p
+      font-size: 30px
+      transition: 1s
+
+  .ballisto
+    padding: 60px 0
+
+  body .overlap .postheader .main .main-text
+    transition: 1s
+    top: 25%
+    left: 15%
+  .box
+    max-width: 100%
+
+@media screen and  (max-width: 800px)
+  .header
+    gap: 20px
+  body .header .rad
+    .button
+      transition: 1s
+      width: 80px
+
+    a,p
+      font-size: 12px
+      transition: 1s
+
+  .grid
+    transition: 1s
+    grid-template-columns: repeat(auto-fit, 260px)
+    div img
+      transition: 1s
+      height: auto
+    .contents
+      h2
+        font-size: 15px
+
+  .box
+    max-width: 100%
+    h1
+      font-size: 20px
+    h2
+      font-size: 15px
+@media screen and  (max-width: 600px)
+  body .overlap .postheader .main .vsblgyq
+    height: auto
+
+  .postheader
+    width: 100%
