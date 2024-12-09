@@ -5,6 +5,7 @@ from io import BytesIO
 from django.core.files import File
 from PIL import Image
 
+
 def make_thumbnail(image, size=(100, 100)):
     """Создает миниатюры заданного размера"""
     im = Image.open(image)
@@ -17,17 +18,17 @@ def make_thumbnail(image, size=(100, 100)):
 
 
 class Almanac(models.Model):
-    task = models.CharField(max_length=100, verbose_name = 'Название предмета')
+    task = models.CharField(max_length=100, verbose_name='Название предмета')
     # name = models.CharField(max_length=100, verbose_name = 'Имя преподавателя')
     # time = models.DateTimeField('время пары')
 
-    monday   = models.BooleanField(default = 0, verbose_name = 'monday'  )
-    tuesday  = models.BooleanField(default = 0, verbose_name = 'tuesday' )
-    wensday  = models.BooleanField(default = 0, verbose_name = 'wensday' )
-    thursdy  = models.BooleanField(default = 0, verbose_name = 'thursdy' )
-    friday   = models.BooleanField(default = 0, verbose_name = 'friday'  )
-    saturday = models.BooleanField(default = 0, verbose_name = 'saturday')
-    sunday   = models.BooleanField(default = 0, verbose_name = 'sunday'  )
+    monday = models.BooleanField(default=0, verbose_name='monday')
+    tuesday = models.BooleanField(default=0, verbose_name='tuesday')
+    wensday = models.BooleanField(default=0, verbose_name='wensday')
+    thursdy = models.BooleanField(default=0, verbose_name='thursdy')
+    friday = models.BooleanField(default=0, verbose_name='friday')
+    saturday = models.BooleanField(default=0, verbose_name='saturday')
+    sunday = models.BooleanField(default=0, verbose_name='sunday')
 
     def __str__(self):
         return self.task
